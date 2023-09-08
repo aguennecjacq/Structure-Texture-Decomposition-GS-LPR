@@ -11,6 +11,6 @@ Once the project has been cloned/downloaded, install the necessary python librar
 
 There are two ways to run the code:
 1. Modify the ```image_file_path``` variable in the main.py file and run the command ```python ./src/main.py``` (or run the code in your favorite IDE).
-2. Run the command ```python ./src/main.py /path/to/your/image/my_image.ext```, e.g python ./src/main.py ./images/Barbara.tif
+2. Run the command ```python ./src/main.py /path/to/your/image/my_image.ext```, e.g ```python ./src/main.py ./images/Barbara.tif```
 
 In both cases, the resulting decomposition should appear in the output folder.
