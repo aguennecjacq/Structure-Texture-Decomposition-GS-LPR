@@ -18,7 +18,7 @@ def grad_sparsity_estimation(input_array, percent):
 def rank_estimation(input_array, percent):
     u, d, v = np.linalg.svd(input_array, full_matrices=False)   # we should use the option compute_uv=False, but jit doesn't work with this option
     cst = d.sum() * percent
-    return np.sum(d.cumsum() < cst) + 1
+    return np.sum(d.cumsum() <= cst)
 
 
 @jit(void(float64[:, :, :], float64[:], float64, float64), fastmath=True, cache=True, nopython=True)
@@ -35,7 +35,7 @@ def update_gamma(p_array, gamma, percent):
         if rank > 0:
             gamma[k] = 1.0 / np.sqrt(rank)
         else:
-            gamma[k] = 1.0
+            gamma[k] = 10.0
 
 
 @jit(UniTuple(float64[:, :], 2)(float64[:, :], int64, int64, int64, int64, int64, float64), cache=True, nopython=True)
