@@ -7,11 +7,16 @@ if __name__ == "__main__":
     image_file_path = "../images/Waaierbuisjeszwam.png"
     output_folder = "../output"
     if len(sys.argv) > 1:
-        output_folder = "/".join(sys.argv[0].replace('\\', '/').split("/")[:-1]) + '/../output'
+        output_folder = "/".join(sys.argv[0].replace('\\', '/').split("/")[:-1])
+        if len(output_folder) == 0:
+            output_folder += './../output'
+        elif output_folder.endswith("/"):
+            output_folder += '../output'
+        else:
+            output_folder += "/../output"
         image_file_path = sys.argv[1].replace('\\', '/')
     input_image_name = image_file_path.split("/")[-1].split(".")[0]
     input_image = get_img(image_file_path)
-
     # structure-texture decomposition parameters
     patch_size = 5
     rho = 5.0   # ADMM adjustement parameter
