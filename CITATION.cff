@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: Guennec
-    given-names: Antoine
+  - family-names: Guennec, Aujol, Traonmilin
+    given-names: Antoine, Jean-François, Yann
     orcid: https://orcid.org/0000-0003-0153-6133
 title: "Gradient-Sparse + Low patch-rank structure texture decomposition"
 version: 1.0
