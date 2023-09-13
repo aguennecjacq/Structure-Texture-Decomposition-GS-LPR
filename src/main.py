@@ -4,7 +4,7 @@ import os
 import sys
 if __name__ == "__main__":
 
-    image_file_path = "../images/concarneau.png"
+    image_file_path = "../images/Waaierbuisjeszwam.png"
     output_folder = "../output"
     if len(sys.argv) > 1:
         output_folder = "/".join(sys.argv[0].replace('\\', '/').split("/")[:-1]) + '/../output'
@@ -14,13 +14,13 @@ if __name__ == "__main__":
 
     # structure-texture decomposition parameters
     patch_size = 5
-    rho = 5.0
+    rho = 5.0   # ADMM adjustement parameter
     tile_size = 64
     overlap = 16
     nb_iter = 200
     update_cst = 0.65
 
-    structure, texture = std_tv_low_rank(input_image, r=5, tile_size=64, rho=5.0, overlap=16, nb_iter=200, update_cst=0.65)
+    structure, texture = std_tv_low_rank(input_image, patch_size, tile_size, rho, overlap, nb_iter, update_cst)
     try:
         os.mkdir(output_folder + f"/{input_image_name}")
     except FileExistsError:
