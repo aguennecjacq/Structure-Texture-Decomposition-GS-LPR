@@ -1,5 +1,6 @@
 # Structure-Texture-Decomposition-GS-LPR
 source code for the paper "ADAPTIVE PARAMETER SELECTION FOR GRADIENT-SPARSE + LOW PATCH-RANK RECOVERY: APPLICATION TO IMAGE DECOMPOSITION"
+(Currently submitted)
 
 The project is organised as follows:
 * **images** -> Folder containing some test images.
