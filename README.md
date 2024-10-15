@@ -1,6 +1,6 @@
 # Structure-Texture-Decomposition-GS-LPR
 source code for the paper "Adaptive parameter selection for gradient sparse + low patch-rank recovery: application to image decomposition"
-(Accepted by EUCIPCO2024)
+(Presented at EUCIPCO2024)
 
 The project is organised as follows:
 * **images** -> Folder containing some test images.
